@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   validates :item_price,      presence: true
 
   belongs_to :user
-  
+
+  has_one_attached :image
 end
 
