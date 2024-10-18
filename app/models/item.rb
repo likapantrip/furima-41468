@@ -7,7 +7,8 @@ class Item < ApplicationRecord
   validates :prefecture_id,   presence: true, numericality: { other_than: 1 , message: "can't be blank"}
   validates :shipping_day_id, presence: true, numericality: { other_than: 1 , message: "can't be blank"}
   validates :item_price,      presence: true, format: { with: /\A\d+\z/ }, numericality: { in: 300..9999999}
-
+  validates :image,           presence: true
+  
   belongs_to :user
   has_one_attached :image
 
