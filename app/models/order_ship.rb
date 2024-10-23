@@ -1,6 +1,7 @@
 class OrderShip
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :street, :building, :phone_number, :order_id
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :street, :building, :phone_number, :order_id, :token
+
 
   # Orderモデルのバリデーション
   with_options presence: true do
@@ -17,10 +18,13 @@ class OrderShip
     validates :phone_number
   end
 
+  # トークンのバリデーション
+  validates :token, presence: true # 追記
+
   # 保存処理
   def save
     order = Order.create(user_id: user_id, item_id: item_id)
     Ship.create(post_code: post_code, prefecture_id: prefecture_id, city: city, street: street, building: building, phone_number: phone_number, order_id: order.id)
-  
+
   end
 end
