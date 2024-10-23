@@ -82,6 +82,22 @@ RSpec.describe OrderShip, type: :model do
         expect(@order_ship.errors.full_messages).to include("Prefecture can't be blank")
       end
 
+      it 'phone_numberが11桁未満だと保存できないこと' do
+        @order_ship.phone_number = "0901234567"
+        @order_ship.valid?
+        expect(@order_ship.errors.full_messages).to include("Phone number is invalid. Input only number")
+      end
+      it 'phone_numberが11桁より多いと保存できないこと' do
+        @order_ship.phone_number = "090123456789"
+        @order_ship.valid?
+        expect(@order_ship.errors.full_messages).to include("Phone number is invalid. Input only number")
+      end
+      it 'phone_numberが全角数字と保存できないこと' do
+        @order_ship.phone_number = "０９０１２３４５６７８"
+        @order_ship.valid?
+        expect(@order_ship.errors.full_messages).to include("Phone number is invalid. Input only number")
+      end
+
     end
 
   end
