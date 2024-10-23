@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe OrderShip, type: :model do
   before do
+    user = FactoryBot.create(:user)
+    sleep 0.1
     item = FactoryBot.create(:item)
     sleep 0.1
-    @order_ship = FactoryBot.build(:order_ship, user_id: item.user, item_id: item.id)
+    @order_ship = FactoryBot.build(:order_ship, user_id: user.id, item_id: item.id)
   end
 
   describe '注文情報の保存' do
@@ -82,8 +84,8 @@ RSpec.describe OrderShip, type: :model do
         expect(@order_ship.errors.full_messages).to include("Prefecture can't be blank")
       end
 
-      it 'phone_numberが11桁未満だと保存できないこと' do
-        @order_ship.phone_number = "0901234567"
+      it 'phone_numberが10桁未満だと保存できないこと' do
+        @order_ship.phone_number = "012345678"
         @order_ship.valid?
         expect(@order_ship.errors.full_messages).to include("Phone number is invalid. Input only number")
       end

@@ -34,14 +34,14 @@ class OrdersController < ApplicationController
 
   def move_to_root_user
     get_item
-    if user_signed_in? && @item.user.id == current_user.id
+    if @item.user.id == current_user.id
       redirect_to root_path
     end
   end
 
   def move_to_root_soldout
     get_item
-    if user_signed_in? && Order.exists?(item_id: @item.id)
+    if Order.exists?(item_id: @item.id)
       redirect_to root_path
     end
   end
