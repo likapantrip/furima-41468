@@ -15,12 +15,12 @@ class OrderShip
     validates :city
     validates :street
     validates :phone_number
-    validates :order
   end
 
   # 保存処理
   def save
-    order = Order.create(user: user_id, item: item_id)
-    Ship.create(post_code: post_code, prefecture: prefecture, city: city, street: street, building: building, phone_number: phone_number, order_id: order.id)
+    order = Order.create(user_id: user_id, item_id: item_id)
+    Ship.create(post_code: post_code, prefecture_id: prefecture_id, city: city, street: street, building: building, phone_number: phone_number, order_id: order.id)
+  
   end
 end
