@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :get_item
   before_action :move_to_root_user
   before_action :move_to_root_soldout
-  before_action :get_item, only: :index
 
   def index
     gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
@@ -16,7 +16,6 @@ class OrdersController < ApplicationController
       @order_ship.save
       redirect_to root_path
     else
-      get_item
       gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
       render :index, status: :unprocessable_entity
     end
@@ -33,14 +32,12 @@ class OrdersController < ApplicationController
   end
 
   def move_to_root_user
-    get_item
     if @item.user.id == current_user.id
       redirect_to root_path
     end
   end
 
   def move_to_root_soldout
-    get_item
     if Order.exists?(item_id: @item.id)
       redirect_to root_path
     end
