@@ -54,11 +54,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'capistrano'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -81,7 +76,7 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn', '6.1.0'
+  gem 'pg'
 end
 
 gem 'devise'
@@ -91,4 +86,3 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'payjp'
 gem 'gon'
-gem "aws-sdk-s3", require: false
