@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy]
 
   def index
-    @items = Item.all.order("created_at DESC")
+    @items = Item.all.order('created_at DESC')
   end
 
   def new
@@ -42,7 +42,8 @@ class ItemsController < ApplicationController
   private
 
   def set_params
-    params.require(:item).permit(:image, :name, :content, :category_id, :condition_id, :shipping_fee_id, :prefecture_id, :shipping_day_id, :item_price).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :name, :content, :category_id, :condition_id, :shipping_fee_id, :prefecture_id,
+                                 :shipping_day_id, :item_price).merge(user_id: current_user.id)
   end
 
   def get_item
@@ -50,8 +51,8 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    if @item.user.id != current_user.id || Order.exists?(item_id: @item.id)
-      redirect_to action: :index
-    end
+    return unless @item.user.id != current_user.id || Order.exists?(item_id: @item.id)
+
+    redirect_to action: :index
   end
 end
