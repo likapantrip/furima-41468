@@ -5,7 +5,7 @@ function preview (){
   // プレビューを表示するためのスペースを取得
   const previewList = document.getElementById('previews');
 
-  // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
+  // 新規投稿・編集ページのフォームがないならここで終了。
   if (!postForm) return null;
 
   // input要素を取得
