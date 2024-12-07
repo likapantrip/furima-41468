@@ -1,0 +1,21 @@
+/* マイページ */
+
+.item-red-btn2 {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 7px 20px;
+
+}
+
+.mypage-content-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mypage-content-space{
+  height: 10px;
+}
