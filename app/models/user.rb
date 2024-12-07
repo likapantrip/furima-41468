@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
+  validates_format_of :password, on: :create, with: PASSWORD_REGEX
 
   validates :nickname, presence: true
   with_options presence: true, format: { with: /\A[ぁ-ゖァ-ヶ一-龥々ー]+\z/ } do
