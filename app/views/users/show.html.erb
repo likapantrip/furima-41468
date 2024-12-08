@@ -10,7 +10,9 @@
         <div class="item-explain-box"></div>
         <div class="mypage-content-title">
           <h2 class="items-sell-title">基本情報</h2>
-          <%= link_to '更新', edit_user_registration_path, class: "item-red-btn2" %>
+          <div class="mypage-btns">
+            <%= link_to '更新', edit_user_registration_path, class: "item-red-btn2" %>
+          </div>
         </div>
         <div class="mypage-content-space"></div>
         <table class="detail-table">
@@ -41,19 +43,36 @@
         <div class="item-explain-box"></div>
         <div class="mypage-content-title">
           <h2 class="items-sell-title">クレジットカード情報</h2>
-          <%= link_to '更新', new_card_path, class: "item-red-btn2" %>
+          <div class="mypage-btns">
+            <%= link_to '更新', new_card_path, class: "item-red-btn2" %>
+            <% unless @user_card.nil? %>
+              <%= link_to '削除', card_path(@user_card.id), data: { turbo_method: :delete }, class: "item-grey-btn" %>
+            <% end %>
+          </div>
         </div>
         <div class="mypage-content-space"></div>
         <table class="detail-table">
           <tbody>
             <tr>
               <th class="detail-item">カード番号</th>
-              <td class="detail-value"><%= "**** **** **** " + @card[:last4] %></td>
+              <td class="detail-value">
+                <% if @card.nil? %>
+                  -
+                <% else %>
+                  <%= "**** **** **** " + @card[:last4] %>
+                <% end %>
+              </td>
               <%# カード番号の下4桁を取得 %>
             </tr>
             <tr>
               <th class="detail-item">有効期限</th>
-              <td class="detail-value"><%= @card[:exp_month] %>/<%= @card[:exp_year] %></td>
+              <td class="detail-value">
+                <% if @card.nil? %>
+                  -
+                <% else %>
+                  <%= @card[:exp_month] %>/<%= @card[:exp_year] %>
+                <% end %>
+              </td>
               <%# 有効期限の「月」/「年」を取得 %>
             </tr>
           </tbody>

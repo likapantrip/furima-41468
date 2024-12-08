@@ -1,5 +1,11 @@
 /* マイページ */
 
+.mypage-btns{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
 .item-red-btn2 {
   text-align: center;
   background-color: #ea352d;
@@ -8,6 +14,16 @@
   color: #FFF;
   padding: 7px 20px;
 
+}
+
+.item-grey-btn {
+  text-align: center;
+  background-color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 7px 20px;
+  margin-left: 5px;
 }
 
 .mypage-content-title{

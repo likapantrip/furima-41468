@@ -9,7 +9,10 @@
     </div>
 
     <%= include_gon %>
-    <%= form_with id: 'charge-form', class: 'card-form', model: @card, url: cards_path, local: true do |f| %>
+    <%#= form_with id: 'charge-form', class: 'card-form', model: @card, url: cards_path, local: true do |f| %>
+    <%= form_with id: 'charge-form', class: 'card-form', url: "/cards", method: :post, local: true do |f| %>
+    <%#= form_with  url: cards_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
+    <%#= form_for @card, url: {action: 'create'} do |f| %>
     <%= render "shared/second-error_messages"%>
 
     <%# カード情報の入力 %>
