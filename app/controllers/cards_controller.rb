@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   def new
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
     @card = Card.new
-    @user_card = Card.find_by(user_id: current_user)
+    # @user_card = Card.find_by(user_id: current_user)
   end
 
   def create
@@ -20,17 +20,13 @@ class CardsController < ApplicationController
       user_id: current_user.id # ログインしているユーザー
     )
 
-    if @card.save
-      count = Card.where(user_id: current_user.id).count - 1
-      count.times do |c|
-        card_old = Card.find_by(user_id: current_user.id)
-        card_old.destroy
-      end
-      redirect_to user_path(current_user.id)
-    else
-      flash[:alert] = 'クレジットカード情報を入力してください'
-      redirect_to action: 'new'
+    @card.save
+    count = Card.where(user_id: current_user.id).count - 1
+    count.times do |c|
+      card_old = Card.find_by(user_id: current_user.id)
+      card_old.destroy
     end
+    redirect_to user_path(current_user.id)
   end
 
   def destroy

@@ -44,7 +44,7 @@
         <div class="mypage-content-title">
           <h2 class="items-sell-title">クレジットカード情報</h2>
           <div class="mypage-btns">
-            <%= link_to '更新', new_card_path, class: "item-red-btn2" %>
+            <%= link_to '更新', new_card_path, class: "item-red-btn2", data: { turbo: false } %>
             <% unless @user_card.nil? %>
               <%= link_to '削除', card_path(@user_card.id), data: { turbo_method: :delete }, class: "item-grey-btn" %>
             <% end %>

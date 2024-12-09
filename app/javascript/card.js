@@ -1,4 +1,4 @@
-const paycard = () => {
+const paycard = () => {  
   if (typeof gon == 'undefined'){ return false;}
 
   const publicKey = gon.public_key;
@@ -16,6 +16,10 @@ const paycard = () => {
   form.addEventListener("submit", (e) => {
     payjp.createToken(numberElement).then(function (response) {
       if (response.error) {
+
+        const flashMessage = document.getElementById("flash-message");
+        flashMessage.style.display = 'block';
+
       } else {
         const token = response.id;
         const tokenObj = `<input value=${token} name='token' type="hidden">`;

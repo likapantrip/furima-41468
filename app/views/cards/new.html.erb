@@ -4,15 +4,12 @@
   <div class='form-wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
-        クレジットカード情報の登録 or 更新
+        クレジットカード情報の更新
       </h1>
     </div>
 
     <%= include_gon %>
-    <%#= form_with id: 'charge-form', class: 'card-form', model: @card, url: cards_path, local: true do |f| %>
-    <%= form_with id: 'charge-form', class: 'card-form', url: "/cards", method: :post, local: true do |f| %>
-    <%#= form_with  url: cards_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
-    <%#= form_for @card, url: {action: 'create'} do |f| %>
+    <%= form_with id: 'charge-form', class: 'card-form', model: @card, url: cards_path, local: true do |f| %>
     <%= render "shared/second-error_messages"%>
 
     <%# カード情報の入力 %>
@@ -52,7 +49,7 @@
         <%= f.submit "登録" ,class:"buy-red-btn" %>
         <div class="form-group"></div>
         <div class="sell-btn-contents">
-          <%= link_to 'もどる', user_path(current_user.id), class:"back-btn" %>
+          <%= link_to 'もどる', user_path(current_user.id), class:"back-btn", data: { turbo: false } %>
         </div>
       </div>
     <% end %>
