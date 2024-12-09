@@ -2,7 +2,6 @@ class CardsController < ApplicationController
   def new
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
     @card = Card.new
-    # @user_card = Card.find_by(user_id: current_user)
   end
 
   def create
