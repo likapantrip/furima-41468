@@ -90,6 +90,9 @@ http://54.178.203.51/
 ### ユーザー情報更新機能
 [![Image from Gyazo](https://i.gyazo.com/940b0114f92b2ba30d50764c0e98c6ea.gif)](https://gyazo.com/940b0114f92b2ba30d50764c0e98c6ea)
 
+### 出品済み商品表示機能
+[![Image from Gyazo](https://i.gyazo.com/ccf1ab1d135c2fd74c954d4378ec0caf.gif)](https://gyazo.com/ccf1ab1d135c2fd74c954d4378ec0caf)
+
 ## クレジットカード登録機能
 ### クレジットカード登録
 [![Image from Gyazo](https://i.gyazo.com/279d26e1efef2f30b3bc6383b9302fff.gif)](https://gyazo.com/279d26e1efef2f30b3bc6383b9302fff)
@@ -99,6 +102,10 @@ http://54.178.203.51/
 
 ### 登録済みカードでの商品購入
 [![Image from Gyazo](https://i.gyazo.com/cdfee60eaba2b9055fb695fa7f0efa37.gif)](https://gyazo.com/cdfee60eaba2b9055fb695fa7f0efa37)
+
+## 戻るボタンの修正
+### 固定ページではなく、1つ前のページに戻る
+
 
 # データベース設計
 ## ER図
