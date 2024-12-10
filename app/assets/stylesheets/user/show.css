@@ -35,3 +35,11 @@
 .mypage-content-space{
   height: 10px;
 }
+
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
