@@ -91,7 +91,7 @@ http://54.178.203.51/
 [![Image from Gyazo](https://i.gyazo.com/940b0114f92b2ba30d50764c0e98c6ea.gif)](https://gyazo.com/940b0114f92b2ba30d50764c0e98c6ea)
 
 ### 出品済み商品表示機能
-[![Image from Gyazo](https://i.gyazo.com/ccf1ab1d135c2fd74c954d4378ec0caf.gif)](https://gyazo.com/ccf1ab1d135c2fd74c954d4378ec0caf)
+(https://gyazo.com/ccf1ab1d135c2fd74c954d4378ec0caf)
 
 ## クレジットカード登録機能
 ### クレジットカード登録
@@ -103,8 +103,8 @@ http://54.178.203.51/
 ### 登録済みカードでの商品購入
 [![Image from Gyazo](https://i.gyazo.com/cdfee60eaba2b9055fb695fa7f0efa37.gif)](https://gyazo.com/cdfee60eaba2b9055fb695fa7f0efa37)
 
-## 戻るボタンの修正
-### 固定ページではなく、1つ前のページに戻る
+## もどるボタン
+### 固定ページではなく、1つ前のページに戻るように修正
 [![Image from Gyazo](https://i.gyazo.com/184e22c5d722913337b356fafafde512.gif)](https://gyazo.com/184e22c5d722913337b356fafafde512)
 
 # データベース設計
@@ -210,3 +210,4 @@ http://54.178.203.51/
 - クレジットカード情報を削除できること
 - ユーザーを削除すると、紐づいているクレジットカード情報が削除されること
 - クレジットカードが登録されていない場合は、購入画面に進めないこと
+- 「もどる」ボタンを部分テンプレートで実装したこと
