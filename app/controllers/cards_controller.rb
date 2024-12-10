@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  before_action :authenticate_user!
   def new
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
     @card = Card.new
