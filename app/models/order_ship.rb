@@ -13,9 +13,6 @@ class OrderShip
     validates :city
     validates :street
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'は不正な値です。数値のみを入力ください' }
-
-    # トークンのバリデーション
-    validates :token
   end
 
   # 保存処理
