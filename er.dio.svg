@@ -1,52 +1,154 @@
-<mxfile host="65bd71144e">
-    <diagram id="ch_iAl6PsQfi05h0Ej0U" name="20241015">
-        <mxGraphModel dx="625" dy="681" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="50" y="70" width="160" height="200" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="email&#10;encrypted_password&#10;nickname&#10;last_name&#10;first_name&#10;last_name_kana&#10;first_name_kana&#10;birthday" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="2">
-                    <mxGeometry y="30" width="160" height="170" as="geometry"/>
-                </mxCell>
-                <mxCell id="5" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="330" y="73" width="160" height="194" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="name&#10;content&#10;category_id&#10;condition_id&#10;shipping_fee_id&#10;prefecture_id&#10;shipping_day_id&#10;item_price&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5">
-                    <mxGeometry y="30" width="160" height="164" as="geometry"/>
-                </mxCell>
-                <mxCell id="7" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="3" target="6">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="10" value="orders" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="330" y="320" width="160" height="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="user&#10;item" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="10">
-                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="3" target="10">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="220" y="195" as="sourcePoint"/>
-                        <mxPoint x="344" y="195" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="14" style="html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" edge="1" parent="1" source="6" target="10">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="ships" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="330" y="480" width="160" height="140" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" value="post_code&#10;prefecture_id&#10;city&#10;street&#10;building&#10;phone_number&#10;order" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="15">
-                    <mxGeometry y="30" width="160" height="110" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" style="html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" edge="1" parent="1" target="15">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="410" y="440" as="sourcePoint"/>
-                        <mxPoint x="424" y="330" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-</mxfile>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="372px" height="572px" viewBox="-0.5 -0.5 372 572" content="&lt;mxfile&gt;&lt;diagram id=&quot;G7VlJk3XFkCXmIjyVzgb&quot; name=&quot;ページ1&quot;&gt;7VpNc9s2EP01unr4IVLSMbGd9uDMeOrOtDlpYAIiMSYBDghGYn59FyJAEgQVK3WkqK500BAPn7v73gKgNAtvi91vApXZZ45JPgs8vJuFd7MgCOdL+FZA0wLxfNECqaC4hfweeKLfiAY9jdYUk8pqKDnPJS1tMOGMkURaGBKCb+1mG57bs5YoJQ7wlKDcRf+iWGYtugwWPf47oWlmZvbjVVtTINNYW1JlCPPtAArvZ+Gt4Fy2T8XuluTKd8Yvbb9PB2q7hQnC5DEd4rbDV5TX2ra6IqLSi5ONsbja0iJHDEofk4zm+AE1vFYzVBIlL6b0MeOCfuNMohyqfACgWkgdwNCzWjypngArVPCaYYJ1pw3U6z7+3JT1Wrz9oIK/dJ4PVH9SQftHY7bXQQ+okmYpxtWqFqMq28+nCiinKYPnBHoTAYB2ChGS7A461u/CBTQnvCBSNNBEd4h1gDXDI13c9nTxTZNsSJWFBpGmaNqN3EcRHnQgp4O6cIJKCkShBUQ79JXFhCWiKSXB6xJV1ZYLPKhkNHlhqCADKAc3rkfYhgoX7BquXxBDk63HNc9UyAyjxuGcCUtONrKL+i3POYTojvE9GTc0z0dQVaKEsvRh3+tuPuKTYosKLAU1f9ATSF4awqDnjmWCSyQHZYi9odJR/Iin+aEJER5LiPlPIMTSIQSVpLiq/M0qDxa/UOYrJ6ojMcL2J5UhAwRJknLRrCm222EqKWc2XGW0LEFJ6w0hdk0pyAb21VqQAz1AznaN4tu6FDQZrk9tNe9N9cvLUb05LQ0IAon+urufQPfnFb7vT57aRnJ7b8ryvemQ/BJpBU4EVO67KuunK2t+XmWFTlxLDufWBG6wR+x/CZXNcDuUgpDh9vtcAwVAS8OhMlDZmtXFsyXgfaJ+dwoOLkfBgZtDHXcThj+otwVQuv8DXPkn/4xYo8QoCyNUME40fyuH3HhebIAve2AedsDdTvusLTWOfj0nnphsUJ2rOBOcEqNjDpclnnKG8vsebdOFtVYDfqLKBXpqbJVgIY9EUHCdEm8L7qhsjVlEuvjFGArPvRWqYIxo/aYW+X3Ng295LRLdSl9SYY0p6d6TTPNjQIhogg8GEyRHkn61VzHFET3DI6fqcGwyjx/ZmSdcjWjWrl73Gr5TGQ00TmFhMBqotdkZaE/ZzuzjWOzuQ29ksc3g6IL5q6nqD3iqF3x6pq4uiahd4vxhoi69m1Xs9Z+5zdvIv/HCVf+JT0Zjd9t9lcYH03BkUfiCCfz9BHzq/LuayL8HTtjnoXUYLW1aj9PmD9DaGqg7RJyAuPP/I3HPxlFz0bVIeuAQeSaSxiOS/tvc6wwURTfeYpCLo5NxNnI4myCBr3fXN99dR7/5hPE5r64TP+UldSVhILGW4Dr2zl+8trS+kMul+2r+1W3hlcvldXM44lh+iANnOpev/uPncij2/zxom/d/3wjv/wE=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 161 31 L 161 14.5 Q 161 1 147.5 1 L 14.5 1 Q 1 1 1 14.5 L 1 31" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1 31 L 1 157.5 Q 1 171 14.5 171 L 147.5 171 Q 161 171 161 157.5 L 161 31" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1 31 L 161 31" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="80.5" y="21.5">
+                users
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" font-size="12px">
+            <text x="6.5" y="48.5">
+                email
+            </text>
+            <text x="6.5" y="62.5">
+                encrypted_password
+            </text>
+            <text x="6.5" y="76.5">
+                nickname
+            </text>
+            <text x="6.5" y="90.5">
+                last_name
+            </text>
+            <text x="6.5" y="104.5">
+                first_name
+            </text>
+            <text x="6.5" y="118.5">
+                last_name_kana
+            </text>
+            <text x="6.5" y="132.5">
+                first_name_kana
+            </text>
+            <text x="6.5" y="146.5">
+                birthday
+            </text>
+        </g>
+        <path d="M 371 31 L 371 14.5 Q 371 1 357.5 1 L 224.5 1 Q 211 1 211 14.5 L 211 31" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 31 L 211 157.5 Q 211 171 224.5 171 L 357.5 171 Q 371 171 371 157.5 L 371 31" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 31 L 371 31" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="290.5" y="21.5">
+                items
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" font-size="12px">
+            <text x="216.5" y="48.5">
+                name
+            </text>
+            <text x="216.5" y="62.5">
+                content
+            </text>
+            <text x="216.5" y="76.5">
+                category_id
+            </text>
+            <text x="216.5" y="90.5">
+                condition_id
+            </text>
+            <text x="216.5" y="104.5">
+                shipping_fee_id
+            </text>
+            <text x="216.5" y="118.5">
+                prefecture_id
+            </text>
+            <text x="216.5" y="132.5">
+                shipping_day_id
+            </text>
+            <text x="216.5" y="146.5">
+                item_price
+            </text>
+            <text x="216.5" y="160.5">
+                user
+            </text>
+        </g>
+        <path d="M 371 231 L 371 214.5 Q 371 201 357.5 201 L 224.5 201 Q 211 201 211 214.5 L 211 231" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 231 L 211 357.5 Q 211 371 224.5 371 L 357.5 371 Q 371 371 371 357.5 L 371 231" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 231 L 371 231" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="290.5" y="221.5">
+                orders
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" font-size="12px">
+            <text x="216.5" y="248.5">
+                user
+            </text>
+            <text x="216.5" y="262.5">
+                item
+            </text>
+        </g>
+        <path d="M 371 431 L 371 414.5 Q 371 401 357.5 401 L 224.5 401 Q 211 401 211 414.5 L 211 431" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 431 L 211 557.5 Q 211 571 224.5 571 L 357.5 571 Q 371 571 371 557.5 L 371 431" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211 431 L 371 431" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="290.5" y="421.5">
+                ships
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" font-size="12px">
+            <text x="216.5" y="448.5">
+                post_code
+            </text>
+            <text x="216.5" y="462.5">
+                prefecture_id
+            </text>
+            <text x="216.5" y="476.5">
+                city
+            </text>
+            <text x="216.5" y="490.5">
+                street
+            </text>
+            <text x="216.5" y="504.5">
+                building
+            </text>
+            <text x="216.5" y="518.5">
+                phone_number
+            </text>
+            <text x="216.5" y="532.5">
+                order
+            </text>
+        </g>
+        <path d="M 121 171 L 121 292 L 211.96 292.04" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 125 175 L 117 175" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 203.96 296.04 L 203.96 288.04 M 211.96 288.04 L 203.96 292.04 L 211.96 296.04" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 161 101 L 211 101" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 165 97 L 165 105" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 203 105 L 203 97 M 211 97 L 203 101 L 211 105" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 291 171 L 291 201" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 295 175 L 287 175" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 287 197 L 295 197" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 291 371 L 291 401" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 295 375 L 287 375" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 287 397 L 295 397" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 161 341 L 161 324.5 Q 161 311 147.5 311 L 14.5 311 Q 1 311 1 324.5 L 1 341" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1 341 L 1 467.5 Q 1 481 14.5 481 L 147.5 481 Q 161 481 161 467.5 L 161 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1 341 L 161 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="80.5" y="331.5">
+                cards
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" font-size="12px">
+            <text x="6.5" y="358.5">
+                customer_token
+            </text>
+            <text x="6.5" y="372.5">
+                user
+            </text>
+        </g>
+        <path d="M 81 171 L 81 311" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 85 175 L 77 175" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 77 303 L 85 303 M 85 311 L 81 303 L 77 311" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+    </g>
+</svg>
