@@ -105,7 +105,7 @@ http://54.178.203.51/
 
 ## 戻るボタンの修正
 ### 固定ページではなく、1つ前のページに戻る
-
+[![Image from Gyazo](https://i.gyazo.com/184e22c5d722913337b356fafafde512.gif)](https://gyazo.com/184e22c5d722913337b356fafafde512)
 
 # データベース設計
 ## ER図
